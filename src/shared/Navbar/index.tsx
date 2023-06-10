@@ -30,10 +30,13 @@ export function Navbar() {
 
   return (
     <>
-    <header className='fixed z-10 w-full flex-col mx-auto py-2 px-4 lg:px-9 lg:py-3 bg-digitux-dark/70 backdrop-blur-[80px] flex'>
+    <header className='fixed z-10 w-full flex-col mx-auto py-2 px-4 lg:px-9 lg:py-3 bg-transparent backdrop-blur-[80px] flex'>
+
      <div className='flex w-full items-center justify-between lg:justify-between'>
       <h1 className='text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#3b5fe2] to-[#fff]'>
-<Link href='/'>Andrew</Link>        </h1>
+<Link href='/'>
+  Andrew</Link> 
+         </h1>
 
       {isNavOpen ? (
         <HiOutlineX
@@ -49,7 +52,7 @@ export function Navbar() {
         />
       )}
 
-      {/* Mobile */}
+      {/* Mobile View */}
       <nav
         className={
           isNavOpen
