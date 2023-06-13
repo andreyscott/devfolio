@@ -15,7 +15,36 @@
   .headerText {
     @apply font-black h-auto text-white lg:text-6xl sm:text-4xl md:text-5xl text-3xl;
   }
+  .icon {
+  @apply text-xl text-blue-500 transition-all ease-in-out duration-700 hover:text-pink-500 hover:mt-2;
 
+  }
+
+}
+.landingSectionTitle::before {
+  content: "";
+  position: absolute;
+  left: 105%;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 6px;
+  width: 100vw;
+  @apply bg-fun-pink;
+  
+}
+
+@media (max-width: 768px) {
+  .landingSectionTitle::before {
+    left: 50%;
+    right: auto;
+    top: -20px;
+    transform: translate(-50%, -50%);
+    height: 8px;
+    width: 150px;
+    color: aqua;
+    
+  }
 }
 
 :root {
