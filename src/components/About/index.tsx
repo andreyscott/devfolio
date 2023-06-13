@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
               iterations={2}
               show={true}              
             >
-              <h2 className="section-heading">Who am I?</h2>
+              <h2 className="section-heading text-white">Who am I?</h2>
             </RoughNotation>
           </div>
           </div>
@@ -89,7 +89,7 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro">
+            <p className="col-start-1 text-white col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro">
   
               With over 5 years of experience in web application development working with both frontend and backend. 
               And a Strong knowledge of SEO and Google Analytics.  I'm currently
@@ -105,12 +105,12 @@ const AboutSection: React.FC = () => {
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.5 }}
-               className="edu-bg my-4">A summary education background</motion.p>
+               className="edu-bg my-4 text-white">A summary education background</motion.p>
               {educationInfo.map((edu) => (
                 <EduGroup edu={edu} key={edu.id} />
               ))}
 
-<ul className="skills-list">
+<ul className="skills-list text-white">
             {skills && skills.map((skill, i) => <li key={i} className='lil'>{skill}</li>)}
           </ul>
 
