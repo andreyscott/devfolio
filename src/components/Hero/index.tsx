@@ -11,7 +11,8 @@ export const Hero = () => {
   )
   
   return (
-    <section  className=' relative  bg-center z-0 bg-cover bg-no-repeat w-screen h-screen flex flex-col md:flex-row'>
+    <section  id='hero'
+    className=' relative  bg-center z-0 bg-cover bg-no-repeat w-screen h-screen flex flex-col md:flex-row'>
             <Image src={bg} alt='bg' layout='fill' objectFit='cover'
             className='bg-center z-0 bg-cover bg-no-repeat w-screen h-screen'
             // width={1920}
