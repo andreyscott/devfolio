@@ -1,13 +1,30 @@
+import { useEffect } from 'react'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import { motion } from 'framer-motion'
 import { Hero } from '@/components/Hero'
 import AboutSection from '@/components/About'
 import Projects from '@/components/ProjectSection'
+import Certificate from '@/components/CertificateSection'
+
+import AOS from "aos";
+
+import "aos/dist/aos.css";
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      easing: "ease-out-cubic",
+      once: false,
+      offset: 50,
+    });
+  }, []);
+
+
+
+
   return (      
       <motion.main
       initial={{ opacity: 0 }}
@@ -17,9 +34,7 @@ export default function Home() {
 <Hero />
 <AboutSection />
 <Projects />
-<h2 className='text-4xl uppercase w-full bg-blue-400'>
-  
-  hello peeps</h2>
+<Certificate />
 
         </motion.main>
   )

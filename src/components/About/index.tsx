@@ -1,135 +1,39 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useEffect, useState, useRef } from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
-
-// import gsap from "gsap";
+import { motion } from "framer-motion";
 
 import andrew from "../../../public/images/andrew.jpg";
 import AboutBgSvg from "@/components/AboutBgSvg";
 import EduGroup from "@/components/EduGroup";
-// import AnimatedLetters from "../components/AnimatedLetters";
 
 const AboutSection: React.FC = () => {
 
-//   const [letterClass, setLetterClass] = useState('text-animate')
-
-//   const letterClassArray = []
-//   for (let i = 1; i <= 100; i++) {
-//     letterClassArray.push(`text-animate _${i}`)
-
-//   }
-
-//   const sectionRef = useRef<HTMLDivElement>(null);
-//   const isSecOnScreen = useOnScreen(sectionRef);
-
-//   const q = gsap.utils.selector(sectionRef);
 
   const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
 
 
-//   useEffect(() => {
-
-    // profile-picture
-    // gsap.fromTo(
-    //     q(".profile-picture"),
-    //   {
-    //     x: -200,
-    //     opacity: 0,
-    //     repeat: 2,
-    //   },
-      
-    //   {
-    //     x: 0,
-    //     opacity: 1,
-    //     scrollTrigger: {
-    //       trigger: q(".profile-picture"),
-    //       start: "20% bottom",
-    //     },
-    //   }
-    // );
-
-    // const fromAnimation = {
-    //   y: 100,
-    //   opacity: 0,
-    //    repeat: 4,
-    // };
-
-    const toAnimation = (triggerTarget: string) => ({
-      y: 0,
-      opacity: 1,
-      scrollTrigger: {
-        // trigger: (`.${triggerTarget}`),
-        start: "top bottom",
-        // markers: true,
-        toggleActions: "restart none",
-        repeat: 4,
-
-
-      },
-    });
-
-    // about-intro
-    // gsap.fromTo(q(".about-intro"), fromAnimation, toAnimation("about-intro"));
-
-    // edu-bg
-    // gsap.fromTo(q(".edu-bg"),  fromAnimation, toAnimation("edu-bg"));
-
-    // bg svg parallax effect
-    // gsap.fromTo(
-    //   q(".bg-svg"),
-    //   { y: -80 },
-    //   {
-    //     scrollTrigger: {
-    //       trigger: q(".bg-svg"),
-    //       scrub: true,
-    //     },
-    //     y: 65,
-    //     duration: 3,
-    //   }
-    // );
-
-    // image bg svg parallax effect
-//     gsap.fromTo(
-//       q(".img-svg"),
-//       { y: -30 },
-//       {
-//         scrollTrigger: {
-//           trigger: q(".img-svg"),
-//           start: "80% 75%",
-//           scrub: true,
-//         },
-//         y: 30,
-//       }
-//     );
-//   }, []);
-
-//   const { theme } = useTheme();
-
   const eduRef = useRef<HTMLDivElement>(null);
 
-  // Set active link for about section
-//   const aboutSection = useScrollActive(sectionRef);
-//   const { onSectionChange } = useSection();
-//   useEffect(() => {
-//     aboutSection ? onSectionChange!("who am i?") : onSectionChange!("");
-//   }, [aboutSection]);
-
   return (
-    <div  className="about-panel bg-white dark:bg-[#1B2731] relative">
+    <div  className="bg-banner bg-cover bg-no-repeat w-screen py-12 h-fit  relative">
       <section id="whoami" className="section">
         <RoughNotationGroup>
+          <div className='w-full h-fit flex flex-col items-center justify-center'>
           <div className="text-center">
             <RoughNotation
               type="underline"
-              color="rgb(0, 122, 122)" // #007a7a
+              color="#1a1a1a"
               strokeWidth={2}
               order={1}
-              show={true}
-            //   show={isSecOnScreen}
+              animationDuration={2000}
+              iterations={2}
+              show={true}              
             >
               <h2 className="section-heading">Who am I?</h2>
             </RoughNotation>
+          </div>
           </div>
           <div className="md:grid grid-rows-5 lg:grid-rows-6 grid-cols-5">
             <div className="col-start-1 col-end-3 row-start-1 row-end-4 lg:row-end-7 lg:col-start-1 lg:col-end-3 flex justify-center items-center py-4 lg:mb-[20%]">
@@ -144,7 +48,15 @@ const AboutSection: React.FC = () => {
                   <path d="M79.2202 0.959991L62.7802 17.32L46.3301 0.959991L29.8902 17.32L13.4501 0.959991L0.410156 13.94L0.400146 17.58L13.4501 4.58999L29.8902 20.95L46.3301 4.58999L62.7802 20.95L79.2202 4.58999L93.7302 19.02L95.5402 17.19L79.2202 0.959991Z" />
                 </svg>
 
-                <div className="profile-picture overflow-hidden md:overflow-visible rounded-md md:shadow-2xl">
+                <motion.div
+                // fade in from left
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1 }}
+
+
+                
+                className="profile-picture overflow-hidden md:overflow-visible rounded-md md:shadow-2xl">
                   <Image
                     src={andrew}
                     width={1700}
@@ -153,7 +65,7 @@ const AboutSection: React.FC = () => {
                     alt="Andrew Irorere profile picture"
                     className="rounded-md"
                   />
-                </div>
+                </motion.div>
 
                 <svg
                   width="15"
@@ -188,7 +100,12 @@ const AboutSection: React.FC = () => {
               className="col-start-3 col-end-6 row-start-1 row-end-6 lg:row-start-2 lg:row-end-7 md:ml-8 place-content-end"
               ref={eduRef}
             >
-              <p className="edu-bg my-4">A summary education background</p>
+              <motion.p
+              
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1.5 }}
+               className="edu-bg my-4">A summary education background</motion.p>
               {educationInfo.map((edu) => (
                 <EduGroup edu={edu} key={edu.id} />
               ))}

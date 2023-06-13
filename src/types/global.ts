@@ -1,8 +1,18 @@
+
 export type RouteTypes = {
     id: number
     label: string,
     navUrl: string
   }
+
+  export type EduProps = {
+    edu: {
+      id: number;
+      title: string;
+      subTitle: string;
+      list: string[];
+    };
+  };
 
   export type Project = {
     id: number;
@@ -14,3 +24,8 @@ export type RouteTypes = {
     tags: string[];
   };
   
+  export interface ICertificateCard {
+    name: string;
+    img: any;
+    url: string;
+  }

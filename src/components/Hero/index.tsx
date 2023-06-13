@@ -34,7 +34,14 @@ export const Hero = () => {
       </div>
 
         <div className='z-10 w-full pt-48 bg-transparent mx-6 flex flex-col md:flex-row'>
-        <div className='w-full md:w-1/2'>
+        <div
+        data-aos="fade-right"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+         className='w-full '>
         <span className="font-black text-3xl lg:text-4xl tracking-widest leading-loose flex items-center">
           {"Hi, I'm".split("").map((letter, index) => {
               return (
@@ -63,14 +70,7 @@ export const Hero = () => {
           </p>
        
         </div>
-        <div className='w-full md:w-1/2 flex justify-center items-center'>
-<Suspense fallback={<div className='text-2xl flex justify-center  '>Loading....</div>}>
-      
-          {/* <EarthCanvas /> */}
-
-</Suspense>
-      
-        </div>
+        
         </div>
 
     </section>

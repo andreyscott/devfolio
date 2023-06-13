@@ -1,56 +1,20 @@
-import { useEffect, useRef } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import {motion} from 'framer-motion'
+import { EduProps } from "@/types/global";
 
-type Props = {
-  edu: {
-    id: number;
-    title: string;
-    subTitle: string;
-    list: string[];
-  };
-};
 
-const EduGroup: React.FC<Props> = ({ edu }) => {
-//   const sectionRef = useRef<HTMLDivElement>(null);
-
-  // Animations
-//   useEffect(() => {
-//     .fromTo(
-//       q(".edu-heading"),
-//       { opacity: 0, y: 100 },
-//       {
-//         opacity: 1,
-//         y: 0,
-//         ease: "Power3.easeInOut",
-//         duration: 0.5,
-//         stagger: 0.2,
-//       }
-//     )
-//       .fromTo(
-//         q(".edu-info"),
-//         { opacity: 0, y: 100 },
-//         { opacity: 1, y: 0, stagger: 0.2 },
-//         "<25%"
-//       )
-//       .fromTo(
-//         q(".edu-list"),
-//         { opacity: 0, y: 50 },
-//         { opacity: 1, y: 0, stagger: 0.2 },
-//         "<10%"
-//       );
-//   }, []);
+const EduGroup: React.FC<EduProps> = ({ edu }) => {
 
   return (
     <motion.main
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+      
+        exit={{ opacity: 0, transition: { duration: 0.5 } }}
      className="edu-group mb-4" >
       <div className="overflow-hidden">
         <h3
-          className={`edu-heading text-marrsgreen dark:text-carrigreen text-lg font-medium`}
+          className={` text-fun-pink  text-lg font-medium`}
         >
           {edu.title}
         </h3>

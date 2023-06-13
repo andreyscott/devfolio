@@ -3,19 +3,24 @@ import Image from "next/image";
 import { kebabCase } from "@/utils/utils";
 import Link from "next/link";
 import { Project } from "@/types/global";
-import projects from "@/data/data";
 import {FiLink} from 'react-icons/fi'
 import { FaGithub } from "react-icons/fa";
+import { motion } from 'framer-motion'
 
 
 
-// function ProjectCard({ project }) {
-// function ProjectCard({ project }: { project: Project & { id: string }}) {
 function ProjectCard({ project }: { project: Project }) {
 
   return (
     <div
-      className="max-w-sm mx-auto flex flex-col projects-center md:projects-start md:justify-center"
+    data-aos="fade-up"
+    data-aos-offset="200"
+    data-aos-delay="50"
+    data-aos-duration="1500"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+
+      className="max-w-sm flex flex-col projects-center md:projects-start mx-2 md:justify-center"
       key={project.id}
     >
       <a

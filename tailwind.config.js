@@ -17,6 +17,9 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+
+          banner: "url('/images/banner-bg.png')",
+          banner1: "url('/images/bannerBg.jpg')",
       },
 
     // create keyframes

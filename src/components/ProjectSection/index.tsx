@@ -12,8 +12,8 @@ type ProjectProps = {
 function Projects({ overwriteProjects }: ProjectProps) {
   const projectsList = overwriteProjects ? overwriteProjects : projects;
   return (
-    <div className="flex flex-col text-left justify-between max-w-6xl pt-8 relative">
-    <div >
+    <div className="flex flex-col text-left justify-between max-w-6xl py-16 relative">
+    <div>
       <SectionTitle title="Here are a few of my favorite projects." />
     </div>
     <div className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">

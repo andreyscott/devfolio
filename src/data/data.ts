@@ -1,7 +1,4 @@
-// import images from public folder
-// import trigan from '../../public/projects/Trigan.webp'
-// import sam from '../../public/projects/sam.webp'
-// import velion from '../../public/projects/velion.webp'
+import { certificateimg } from "@/assets/Certificate/certificate";
 
 import { RouteTypes } from "@/types/global"
 import { Project } from "@/types/global";
@@ -46,6 +43,34 @@ const projects: Project[] = [
     },
 ];
 
-export const allTags = []
+export const Certifications = [
+  {
+    name: "Google Digital Skills for Africa",
+    img: certificateimg.c1,
+    url: "https://learndigital.withgoogle.com/digitalskills/certificate/verify/6ZLJZQZL",
+  },
+  {
+    name: "Advanced JavaScript by SoloLearn",
+    img: certificateimg.c2,
+    url: "https://www.sololearn.com/Certificate/1024-20263289/pdf/",
+    },
+  {
+    name: "Responsive Web Design",
+    img: certificateimg.c3,
+    url: "https://www.freecodecamp.org/certification/andreyscott/responsive-web-design",
+  },
+  {
+    name: "JavaScript Algorithms and Data Structures",
+    img: certificateimg.c4,
+    url: "https://www.freecodecamp.org/certification/andreyscott/javascript-algorithms-and-data-structures",
+  },
+  {
+    name: "Front End Development(React)",
+    img: certificateimg.c5,
+    url: "https://www.freecodecamp.org/certification/andreyscott/front-end-libraries",
+  },
+
+];
+
 
 export default projects
