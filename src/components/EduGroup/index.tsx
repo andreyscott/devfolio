@@ -20,7 +20,7 @@ const EduGroup: React.FC<EduProps> = ({ edu }) => {
         </h3>
       </div>
       <div className="overflow-hidden">
-        <span className={`edu-info text-slate-500 dark:text-slate-200 italic`}>
+        <span className={`edu-info text-slate-200 italic`}>
           {edu.subTitle}
         </span>
       </div>
