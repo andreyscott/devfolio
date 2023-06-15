@@ -62,15 +62,7 @@ module.exports = {
         },
         },   
 
-    },
-
-
-
-
-     
-    
-    
-    
+    },    
     },
   },
   plugins: [],

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { HiMenuAlt1, HiOutlineX } from 'react-icons/hi'
 
-// import ScrollStatus from '../../components/Scroll'
+import ScrollStatus from '../../components/Scroll'
 
 import { MenuData } from '@/data/data'
 
@@ -23,7 +23,7 @@ export function Navbar() {
   const handleOpenNavMenu = () => {
     setIsNavOpen(prev => !prev)
   }
-  // window.addEventListener("scroll", changeNavbarColor);
+  window.addEventListener("scroll", changeNavbarColor);
 
 
   const { asPath } = useRouter()
@@ -96,7 +96,7 @@ export function Navbar() {
         </ul>
       </nav>
       </div>
-      {/* <ScrollStatus /> */}
+      <ScrollStatus />
     </header>
 </>
   )

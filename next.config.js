@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['andreyscott.vercel.app'],
+    domains: ['andreyscott.vercel.app', 'cdn.sanity.io'],
   },
 }
 

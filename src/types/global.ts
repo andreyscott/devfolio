@@ -26,6 +26,7 @@ export type RouteTypes = {
   
   export interface ICertificateCard {
     name: string;
-    img: any;
+    image: string;
     url: string;
+    alt: string;
   }

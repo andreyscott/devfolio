@@ -65,9 +65,9 @@ export const Certifications = [
     url: "https://www.freecodecamp.org/certification/andreyscott/javascript-algorithms-and-data-structures",
   },
   {
-    name: "Front End Development(React)",
+    name: "Front End Development(React) sidehustleinternship.com",
     img: certificateimg.c5,
-    url: "https://www.freecodecamp.org/certification/andreyscott/front-end-libraries",
+    url: 'https://sidehustleinternship.com/certificate/andreyscott',
   },
 
 ];
