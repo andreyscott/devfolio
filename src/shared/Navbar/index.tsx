@@ -93,8 +93,8 @@ export function Navbar() {
                 <span
                   className={
                     asPath === navUrl
-                      ? ' text-digitux-light font-bold border-b-2 border-digitux-pblue '
-                      : 'text-digitux-light/80 hover:text-digitux-light hover:border-b-2 border-digitux-pblue'
+                      ? ' text-white font-bold border-b-2 border-digitux-pblue '
+                      : 'text-white/80 hover:text-digitux-light hover:border-b-2 border-digitux-pblue'
                   }>
                   {label}
                 </span>
