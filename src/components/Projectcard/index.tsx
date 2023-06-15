@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Project } from "@/types/global";
 import {FiLink} from 'react-icons/fi'
 import { FaGithub } from "react-icons/fa";
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 
 
 
