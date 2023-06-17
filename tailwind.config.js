@@ -18,8 +18,8 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 
-          banner: "url('/images/banner-bg.png')",
-          banner1: "url('/images/bannerBg.jpg')",
+          banner: "url('/images/banner-bg.webp')",
+          banner1: "url('/images/bannerBg.svg')",
       },
 
     // create keyframes

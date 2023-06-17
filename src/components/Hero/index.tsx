@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { Suspense, lazy } from 'react'
-import bg from '../../../public/images/bg.jpg'
-import logo from '../../../public/images/astronout.png'
+import bg from '../../../public/images/bg.webp'
+import logo from '../../../public/images/astronout.webp'
 import logo1 from '../../../public/images/astronout1.png'
 import Image from 'next/image'
 

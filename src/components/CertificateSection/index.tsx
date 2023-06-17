@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { CertificationCard } from '../CertificationCard'
 import { getPages } from '../../../sanity/sanity-utils'
 import { Page } from "@/types/Page";
+import SectionTitle from '../Sectiontitle';
 
 
 export default function Certificate ()  {  
@@ -20,7 +21,16 @@ export default function Certificate ()  {
 
 
   return (
-    <section className="bg-banner1 bg-cover bg-no-repeat py-12 w-full h-full">
+    <section 
+    data-aos="fade-up"
+    data-aos-delay="100"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    id="certificates"
+    className="bg-banner1 bg-cover bg-no-repeat max-w-6xl py-16 w-full h-full">
+      <div className="text-center">
+      <SectionTitle title="Here are a few of the free certificates I acquired" />
+      </div>
         <div className="flex flex-row flex-wrap items-center justify-center pt-24 h-fit mb-8 mt-8 ">
        
                     {projects.map((project, index) => (

@@ -89,11 +89,10 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            <p className="col-start-1 text-white col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro">
+            <p className="col-start-1 text-white col-end-3 row-start-4 row-end-6 lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto ">
   
               With over 5 years of experience in web application development working with both frontend and backend. 
-              And a Strong knowledge of SEO and Google Analytics.  I'm currently
-              working as a frontend developer at a Scottish startup.
+              And a Strong knowledge of SEO and Google Analytics. I am a self-motivated and passionate developer who is always looking to learn new technologies and improve on my skills.  
             </p>
 
             <div
@@ -105,7 +104,7 @@ const AboutSection: React.FC = () => {
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.5 }}
-               className="edu-bg my-4 text-white">A summary education background</motion.p>
+               className="edu-bg my-4 text-white">A summary of my education background</motion.p>
               {educationInfo.map((edu) => (
                 <EduGroup edu={edu} key={edu.id} />
               ))}

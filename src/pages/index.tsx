@@ -24,9 +24,6 @@ export default function Home() {
     });
   }, []);
 
-
-
-
   return (      
       <motion.main
       initial={{ opacity: 0 }}
