@@ -27,7 +27,7 @@ export default function Certificate ()  {
     data-aos-duration="1000"
     data-aos-easing="ease-in-out"
     id="certificates"
-    className="bg-banner1 bg-cover bg-no-repeat w-full h-full">
+    className="bg-banner1 bg-cover bg-no-repeat w-screen h-full">
       <div className="text-center mx-8">
       <SectionTitle title="Here are a few of the free certificates I acquired" />
       </div>
